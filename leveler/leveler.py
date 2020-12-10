@@ -1037,7 +1037,7 @@ class Leveler(commands.Cog):
             f.write(image)
 
         im = Image.open(f"{cog_data_path(self)}/temp_auto.png").convert("RGBA")
-        im = im.resize((580, 580))  # resized to reduce time
+        im = im.resize((290, 290))  # resized to reduce time
         ar = numpy.asarray(im)
         shape = ar.shape
         ar = ar.reshape(scipy.product(shape[:2]), shape[2])
@@ -2224,7 +2224,7 @@ class Leveler(commands.Cog):
     @lvladminbg.command()
     @commands.guild_only()
     async def addprofilebg(self, ctx, name: str, url: str):
-        """Add a profile background. Proportions: (290px x 290px)"""
+        """Add a profile background. Proportions: (580px x 580px)"""
         backgrounds = await self.get_backgrounds()
         if name in backgrounds["profile"].keys():
             await ctx.send("**That profile background name already exists!**")
@@ -2528,19 +2528,19 @@ class Leveler(commands.Cog):
 
         # set canvas
         bg_color = (255, 255, 255, 0)
-        result = Image.new("RGBA", (290, 290), bg_color)
-        process = Image.new("RGBA", (290, 290), bg_color)
+        result = Image.new("RGBA", (580, 580), bg_color)
+        process = Image.new("RGBA", (580, 580), bg_color)
 
         # draw
         draw = ImageDraw.Draw(process)
 
         # puts in background
-        bg_image = bg_image.resize((290, 290), Image.ANTIALIAS)
-        bg_image = bg_image.crop((0, 0, 290, 290))
+        bg_image = bg_image.resize((580, 580), Image.ANTIALIAS)
+        bg_image = bg_image.crop((0, 0, 580, 580))
         result.paste(bg_image, (0, 0))
 
         # draw filter
-        draw.rectangle([(0, 0), (290, 290)], fill=(0, 0, 0, 10))
+        draw.rectangle([(0, 0), (580, 580)], fill=(0, 0, 0, 10))
 
         # draw transparent overlay
         vert_pos = 110
