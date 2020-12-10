@@ -2625,15 +2625,15 @@ class Leveler(commands.Cog):
         process.paste(lvl_circle, (circle_left, circle_top), lvl_bar_mask)
 
         # draws boxes
-        draw.rectangle([(5, 133), (100, 285)], fill=badge_fill)  # badges
-        draw.rectangle([(10, 138), (95, 168)], fill=rep_fill)  # reps
+        draw.rectangle([(10, 266), (200, 570)], fill=badge_fill)  # badges
+        draw.rectangle([(20, 276), (190, 336)], fill=rep_fill)  # reps
 
-        total_gap = 10
+        total_gap = 20
         # border = int(total_gap / 2)
         profile_size = lvl_circle_dia - total_gap
         # raw_length = profile_size * multiplier
         # put in profile picture
-        total_gap = 6
+        total_gap = 12
         border = int(total_gap / 2)
         profile_size = lvl_circle_dia - total_gap
         mask = mask.resize((profile_size, profile_size), Image.ANTIALIAS)
