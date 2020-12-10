@@ -2653,7 +2653,7 @@ class Leveler(commands.Cog):
             header_u_fnt,
             (110, 110, 110, 255),
         )  # NAME
-        _write_unicode(userinfo["title"], head_align, 136, level_label_fnt, header_u_fnt, white_color)
+        _write_unicode(userinfo["title"], head_align, 272, level_label_fnt, header_u_fnt, white_color)
 
         # draw level box
         level_right = 290
