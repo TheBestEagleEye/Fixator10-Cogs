@@ -1037,7 +1037,7 @@ class Leveler(commands.Cog):
             f.write(image)
 
         im = Image.open(f"{cog_data_path(self)}/temp_auto.png").convert("RGBA")
-        im = im.resize((290, 290))  # resized to reduce time
+        im = im.resize((580, 580))  # resized to reduce time
         ar = numpy.asarray(im)
         shape = ar.shape
         ar = ar.reshape(scipy.product(shape[:2]), shape[2])
