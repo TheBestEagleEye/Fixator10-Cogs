@@ -2566,8 +2566,8 @@ class Leveler(commands.Cog):
             info_color = (30, 30, 30, 220)
 
         draw.rectangle([(left_pos - 20, vert_pos + title_height), (right_pos, 156)], fill=info_color)  # title box
-        draw.rectangle([(100, 159), (285, 212)], fill=info_color)  # general content
-        draw.rectangle([(100, 215), (285, 285)], fill=info_color)  # info content
+        draw.rectangle([(200, 318), (570, 424)], fill=info_color)  # general content
+        draw.rectangle([(200, 430), (570, 570)], fill=info_color)  # info content
 
         # stick in credits if needed
         # if bg_url in bg_credits.keys():
