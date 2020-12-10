@@ -2575,14 +2575,14 @@ class Leveler(commands.Cog):
         # credit_init = 290 - credit_fnt.getsize(credit_text)[0]
         # draw.text((credit_init, 0), credit_text,  font=credit_fnt, fill=(0,0,0,100))
         draw.rectangle(
-            [(5, vert_pos), (right_pos, vert_pos + title_height)], fill=(230, 230, 230, 230)
+            [(5, vert_pos), (right_pos, vert_pos + title_height)], fill=(460, 460, 460, 460)
         )  # name box in front
 
         # draw level circle
-        multiplier = 8
-        lvl_circle_dia = 104
-        circle_left = 1
-        circle_top = 42
+        multiplier = 16
+        lvl_circle_dia = 208
+        circle_left = 2
+        circle_top = 84
         raw_length = lvl_circle_dia * multiplier
 
         # create mask
